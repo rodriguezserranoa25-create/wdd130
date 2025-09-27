@@ -16,12 +16,39 @@
   box-sizing: border-box;
 }
 
+nav a:hover {
+    background-color: black;
+}
+
 /* Body Styling */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--accent2-color);
 }
+
+header {
+  display: flex;               /* make children align in a row */
+  align-items: center;         /* vertically center logo and nav */
+  justify-content: space-between; /* logo left, nav right */
+  padding: 10px 20px;          /* optional padding */
+}
+
+header img {
+  height: 60px;               /* adjust logo size */
+  width: auto;
+}
+
+header nav a {
+    color: white;              /* text color */
+    padding: 5px 10px;         /* space inside the link */
+    text-decoration: none;     /* remove underline */
+    font-weight: 700;          /* bold */
+    background-color: gray;    /* background behind the link */
+    border-radius: 5px;        /* optional: rounded corners */
+    margin-left: 10px;         /* spacing between links */
+}
+
 
 /* Limit Page Width */
 header, main, footer {
@@ -41,6 +68,49 @@ nav, p, section, article {
   padding: 8px;
 }
 
+.history-container {
+    display: flex;
+    align-items: stretch;   /* makes image match the text height */
+    gap: 20px;              /* space between text and image */
+}
+
+.history-text {
+    flex: 1;                /* text takes equal space on both sides */
+}
+
+.history-image {
+    flex: 1;                /* image takes same width as text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;       /* image matches container height */
+    object-fit: cover;      /* scales image nicely */
+    border-radius: 8px;     /* optional styling */
+    padding: 1px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between; /* pushes p left, logos right */
+  align-items: center;            /* keeps them at the same height */
+  padding: 10px;
+}
+
+/* Footer social media links container */
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
 /* Footer social media links - remove underline */
 .socialmedia a {
   text-decoration: none;
@@ -48,7 +118,7 @@ nav, p, section, article {
 
 /* Smaller social media logos */
 .socialmedia img {
-  width: 20px;  /* Smaller size */
+  width: 20px;
   height: 20px;
 }
 
@@ -97,4 +167,18 @@ nav, p, section, article {
   margin-left: 12px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.adventure-images {
+  display: flex;             /* put images in a row */
+  justify-content: space-between; /* space them evenly */
+  gap: 10px;                 /* optional spacing between images */
+  flex-wrap: wrap;           /* wrap on smaller screens */
+  margin-top: 20px;
+}
+
+.adventure-images img {
+  width: 150px;              /* adjust size as needed */
+  height: auto;              /* keep aspect ratio */
+  border-radius: 8px;        /* optional: rounded corners */
 }
