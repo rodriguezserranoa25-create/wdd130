@@ -168,16 +168,27 @@ footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.adventure-figures {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 30px; /* space from the heading */
+.adventure-gallery {
+    display: flex;                     /* keep images in a row */
+    justify-content: space-between;    /* space evenly across the row */
+    gap: 10px;                         /* spacing between images */
+    margin-top: 30px;                  /* space from the heading */
+    flex-wrap: wrap;                    /* wrap on smaller screens */
 }
 
-.adventure-figures img {
-    width: 150px;                     /* adjust size */
-    height: auto;
-    border-radius: 8px;               /* optional styling */
+.adventure-gallery figure {
+    display: flex;
+    flex-direction: column;            /* image on top, caption below */
+    align-items: center;
+    margin: 0;
 }
+
+.adventure-gallery img {
+    width: 150px;                      /* adjust size as needed */
+    height: auto;
+    border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 5px;
+    text-align: center;
