@@ -23,6 +23,13 @@ body {
   background-color: var(--accent2-color);
 }
 
+.contact-page h1 {
+    text-align: center;   /* centers the text horizontally */
+    margin-bottom: 1rem;  /* optional spacing below the h1 */
+    color: var(--primary-color); /* optional, match your theme */
+    font-family: var(--heading-font); /* optional, consistent with headings */
+}
+
 /* Limit Page Width */
 header, main, footer {
   width: 840px;
