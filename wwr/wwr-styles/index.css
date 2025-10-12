@@ -1,0 +1,308 @@
+/* Root Variables from contact.css for consistency */
+:root {
+  --primary-color: #004c6d;
+  --secondary-color: #0099cc;
+  --accent1-color: #333333;
+  --accent2-color: #f4f4f4;
+
+  --heading-font: 'Georgia', serif;
+  --body-font: 'Arial', sans-serif;
+}
+
+/* Reset Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Limit Page Width for consistency */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Add a wrapper for the whole page */
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ====== HEADER ====== */
+header {
+  display: grid; /* Changed to grid */
+  grid-template-columns: 150px 1fr; /* Logo area and nav area */
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: white; /* Changed background */
+  color: white;
+  border-radius: 0; /* Removed radius */
+  box-shadow: none; /* Removed shadow */
+  margin-bottom: 20px;
+}
+
+header img {
+  height: auto; /* Let the width control the size */
+  width: 120px; /* Adjust logo size */
+}
+
+header nav {
+  background-color: var(--primary-color); /* Add blue bar to nav */
+  border-radius: 8px;
+  padding: 10px;
+  display: flex; /* Ensure links are in a row */
+  justify-content: flex-end; /* Align links to the right */
+}
+
+header nav a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  position: relative;
+  margin: 20px auto; /* Add margin */
+  width: 100%; /* Make it responsive within the container */
+  border-radius: 8px; /* Add border radius */
+  overflow: hidden; /* Hide overflowing parts of the image */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: center;
+  width: auto; /* Let content define width */
+  max-width: 90%;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  background-color: rgba(0, 76, 109, 0.8); /* Primary color with transparency */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero article img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-color);
+}
+
+/* ====== MAIN CONTENT ====== */
+main section {
+  text-align: center;
+  margin: 60px 0;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* History Section */
+.history-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
+}
+
+.history-text {
+  flex: 1;
+}
+
+.history-image {
+  flex: 1;
+}
+
+.history-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Adventure Gallery Section */
+.adventure-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.adventure-gallery figure {
+  width: 150px; /* Five figures fit well in 840px width */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 0;
+}
+
+.adventure-gallery img {
+  width: 100%;
+}
+
+.adventure-gallery figcaption {
+  background-color: #eee;
+  padding: 8px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Newsletter Section */
+main form {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+main form input[type="email"] {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+main form button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+main form button:hover {
+  background-color: var(--primary-color);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  background-color: transparent; /* Ensure footer is not in a card */
+  box-shadow: none;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 10px;
+}
+
+.socialmedia img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 860px) 
+  header, main, footer, .hero {
+  header, main, footer, .hero, #content {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header {
+    grid-template-columns: 1fr; /* Stack logo and nav on mobile */
+    justify-items: center;
+    gap: 15px;
+    border-radius: 0;
+  }
+  
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  header nav a {
+    margin-left: 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.5em;
+    width: 90%;
+    top: 10px;
+  }
+
+  .hero article {
+    flex-direction: column;
+    position: static; /* Let it sit in the normal flow on mobile */
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .history-container {
+    flex-direction: column;
+  }
+  
+  main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

@@ -1,0 +1,186 @@
+/* Root Variables from contact.css for consistency */
+:root {
+  --primary-color: #004c6d;
+  --secondary-color: #0099cc;
+  --accent1-color: #333333;
+  --accent2-color: #f4f4f4;
+
+  --heading-font: 'Georgia', serif;
+  --body-font: 'Arial', sans-serif;
+}
+
+/* Reset Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Limit Page Width for consistency */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* ====== HEADER ====== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0 0 8px 8px; /* Corrected: Added border-radius */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* Corrected: Added box-shadow */
+}
+
+header img {
+  height: 80px;
+  width: auto;
+}
+
+header nav a {
+  color: white;
+  padding: 8px 12px; /* Corrected: Matched padding */
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px; /* Corrected: Applied radius to base style */
+  margin-left: 10px; /* Corrected: Added margin */
+  transition: background 0.3s ease; /* Corrected: Simplified transition */
+}
+
+header nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ====== MAIN CONTENT ====== */
+main section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+/* Trips Grid Layout */
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  text-align: left; /* Ensures text inside cards is left-aligned */
+}
+
+.trip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.trip img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip h2 {
+  padding: 15px 15px 5px 15px;
+  font-size: 1.5em;
+}
+
+.trip p {
+  padding: 0 15px 15px 15px;
+  flex-grow: 1;
+}
+
+.trip p strong {
+  color: var(--primary-color);
+}
+
+/* Call to Action Button */
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color);
+}
+
+
+/* ====== FOOTER ====== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Corrected: Matched padding */
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 10px; /* Corrected: Matched gap */
+}
+
+.socialmedia img {
+  width: 20px; /* Corrected: Matched size */
+  height: 20px; /* Corrected: Matched size */
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 860px) { /* Adjusted breakpoint for new width */
+  header, main, footer {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 0;
+  }
+  
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header nav a {
+    margin-left: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
