@@ -43,29 +43,29 @@ header, main, footer {
 
 /* ====== HEADER ====== */
 header {
-  display: grid; /* Changed to grid */
-  grid-template-columns: 150px 1fr; /* Logo area and nav area */
+  display: grid;
+  grid-template-columns: 150px 1fr;
   align-items: center;
   justify-content: space-between;
   padding: 15px 25px;
-  background-color: white; /* Changed background */
-  color: white;
-  border-radius: 0; /* Removed radius */
-  box-shadow: none; /* Removed shadow */
+  background-color: white;
+  color: var(--primary-color); /* CORREGIDO: El color del texto ahora contrasta con el fondo blanco */
+  border-radius: 0;
+  box-shadow: none;
   margin-bottom: 20px;
 }
 
 header img {
-  height: auto; /* Let the width control the size */
-  width: 120px; /* Adjust logo size */
+  height: auto;
+  width: 120px;
 }
 
 header nav {
-  background-color: var(--primary-color); /* Add blue bar to nav */
+  background-color: var(--primary-color);
   border-radius: 8px;
   padding: 10px;
-  display: flex; /* Ensure links are in a row */
-  justify-content: flex-end; /* Align links to the right */
+  display: flex;
+  justify-content: flex-end;
 }
 
 header nav a {
@@ -85,10 +85,10 @@ header nav a:hover {
 /* ====== HERO SECTION ====== */
 .hero {
   position: relative;
-  margin: 20px auto; /* Add margin */
-  width: 100%; /* Make it responsive within the container */
-  border-radius: 8px; /* Add border radius */
-  overflow: hidden; /* Hide overflowing parts of the image */
+  margin: 20px auto;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .hero img {
@@ -106,7 +106,7 @@ header nav a:hover {
   padding: 15px 25px;
   border-radius: 8px;
   text-align: center;
-  width: auto; /* Let content define width */
+  width: auto;
   max-width: 90%;
 }
 
@@ -116,7 +116,7 @@ header nav a:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
-  background-color: rgba(0, 76, 109, 0.8); /* Primary color with transparency */
+  background-color: rgba(0, 76, 109, 0.8);
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -127,7 +127,7 @@ header nav a:hover {
 
 .hero article h2 {
   color: white;
-  margin: 0; /* Resets the margin so it doesn't interfere with flexbox alignment */
+  margin: 0;
 }
 
 .hero article img {
@@ -184,7 +184,7 @@ h2 {
 }
 
 .adventure-gallery figure {
-  width: 150px; /* Five figures fit well in 840px width */
+  width: 150px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: 0;
@@ -241,7 +241,7 @@ footer {
   padding: 10px;
   border-top: 1px solid #ddd;
   margin-top: 40px;
-  background-color: transparent; /* Ensure footer is not in a card */
+  background-color: transparent;
   box-shadow: none;
 }
 
@@ -256,8 +256,8 @@ footer {
 }
 
 /* ====== RESPONSIVE DESIGN ====== */
-@media (max-width: 860px) 
-  header, main, footer, .hero {
+@media (max-width: 860px) { /* CORREGIDO: Se agregó la llave de apertura '{' */
+  /* CORREGIDO: Se eliminó la línea de selectores duplicada */
   header, main, footer, .hero, #content {
     width: 100%;
     padding-left: 15px;
@@ -265,7 +265,7 @@ footer {
   }
 
   header {
-    grid-template-columns: 1fr; /* Stack logo and nav on mobile */
+    grid-template-columns: 1fr;
     justify-items: center;
     gap: 15px;
     border-radius: 0;
@@ -288,7 +288,7 @@ footer {
 
   .hero article {
     flex-direction: column;
-    position: static; /* Let it sit in the normal flow on mobile */
+    position: static;
     transform: none;
     width: 100%;
     margin-top: 10px;
@@ -310,4 +310,3 @@ footer {
     gap: 10px;
   }
 }
-
