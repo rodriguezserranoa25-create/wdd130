@@ -125,6 +125,11 @@ header nav a:hover {
   gap: 15px;
 }
 
+.hero article h2 {
+  color: white;
+  margin: 0; /* Resets the margin so it doesn't interfere with flexbox alignment */
+}
+
 .hero article img {
   width: 100px;
   height: 100px;
